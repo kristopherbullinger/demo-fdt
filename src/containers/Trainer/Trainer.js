@@ -9,13 +9,12 @@ import RoundView from "./components/RoundView/RoundView";
 import ScoreView from "./components/ScoreView/ScoreView";
 
 class Trainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      roundStart: false,
-      roundEnd: false
-    };
-  }
+
+  state = {
+    roundStart: false,
+    roundEnd: false
+  };
+
 
   handleClick = () => {
     this.props.updateCards();

@@ -13,17 +13,15 @@ import createAllCards from "../src/utils/createAllCardsList";
 import { thumbsArr } from "./assets/importAssets";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userName: "userName",
-      character: "Dragunov",
-      filter: "Most Popular",
-      property: "on_block",
-      cards: [],
-      round: {}
-    };
-  }
+
+  state = {
+    userName: "userName",
+    character: "Dragunov",
+    filter: "Most Popular",
+    property: "on_block",
+    cards: [],
+    round: {}
+  };
 
   createRound = () => {
     const { userName, character, filter, property, cards } = this.state;
@@ -48,23 +46,11 @@ class App extends Component {
     this.createRound();
   };
 
-  updateCharacter = character => {
-    this.setState({
-      character: character
-    });
-  };
+  updateCharacter = character => this.setState({character});
 
-  updateFilter = filter => {
-    this.setState({
-      filter: filter
-    });
-  };
+  updateFilter = filter => this.setState({filter});
 
-  updateProperty = property => {
-    this.setState({
-      property: property
-    });
-  };
+  updateProperty = property => this.setState({property});
 
   render() {
     const { character, filter, property, round } = this.state;
